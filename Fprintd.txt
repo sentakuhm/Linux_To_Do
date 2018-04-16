@@ -25,3 +25,7 @@ $sudo nano /etc/pam.d/login
 add this in first line:
 
 auth sufficient pam_fprintd.so
+
+just on SDDM add same line too in :
+
+/etc/pam.d/sddm.
