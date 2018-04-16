@@ -1,0 +1,23 @@
+sudo pacman -S gamin gvfs ntfs-3g dosfstools
+
+
+add user permissions: sudo gpasswd -a $USER disk
+
+list out drives: sudo blkid
+
+make a directory on root ; i.e. sudo mkdir /Disk
+
+
+for bootup add in fstab ; /dev/sdc1 /mirror ntfs-3g uid=username,gid=users,umask=0022 0  0
+
+su
+cd /usr/share/polkit-1/rules.d
+create file called: 10-drives.rules
+add:
+#############################
+polkit.addRule(function(action) {
+        if (action.id == "org.freedesktop.udisks2.filesystem-mount-system") {
+            return polkit.Result.YES;
+   }
+});
+############################

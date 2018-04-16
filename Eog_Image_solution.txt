@@ -1,0 +1,1 @@
+$ xprop -root -remove _ICC_PROFILE

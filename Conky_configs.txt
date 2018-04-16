@@ -1,0 +1,78 @@
+background no
+font inconsolata:size=9
+#xftfont inconsolata:size=10
+use_xft yes
+xftalpha 0.9
+update_interval 3.0
+total_run_times 0
+own_window yes
+own_window_type normal
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+minimum_size 0 0
+maximum_width 220
+draw_shades yes
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+default_color white
+default_shade_color black
+default_outline_color white
+alignment top_right
+gap_x 0
+gap_y 0
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+override_utf8_locale no
+uppercase yes # set to yes if you want all text to be in uppercase
+
+own_window_argb_value 0
+own_window_argb_visual yes
+own_window_colour 000000
+TEXT
+
+
+            ${font hackman:bold:size=12}${color #007fff}Arch${color}Linux${font}
+
+
+${color green}${font bold:size=8}SYSTEM${font}${hr 1}${color}
+
+Hostname: $alignr$nodename
+Kernel: $alignr$kernel
+Uptime: $alignr$uptime
+Temp: ${alignr}${acpitemp}C
+CPU: ${alignr}${freq} MHz
+Processes: ${alignr}$processes ($running_processes running)
+Load: ${alignr}$loadavg
+
+${color yellow}CPU Freq:$alignr $color${freq_g}GHz
+Usage:$cpu% ${cpubar 3}
+${cpugraph 15, a1a1a1 cd8500}
+${color yellow}Highest CPU $alignr CPU% MEM%${color}
+${top name 1}$alignr${top cpu 1}${top mem 1}
+${top name 2}$alignr${top cpu 2}${top mem 2}
+${top name 3}$alignr${top cpu 3}${top mem 3}
+${top name 4}$alignr${top cpu 3}${top mem 4}
+${top name 5}$alignr${top cpu 3}${top mem 5}
+${top name 6}$alignr${top cpu 3}${top mem 6}
+${color yellow}Highest MEM $alignr CPU% MEM%${color}
+${top_mem name 1}$alignr${top_mem cpu 1}${top_mem mem 1}
+${top_mem name 2}$alignr${top_mem cpu 2}${top_mem mem 2}
+${top_mem name 3}$alignr${top_mem cpu 3}${top_mem mem 3}
+${top_mem name 4}$alignr${top_mem cpu 3}${top_mem mem 4}
+${top_mem name 5}$alignr${top_mem cpu 3}${top_mem mem 5}
+${top_mem name 6}$alignr${top_mem cpu 3}${top_mem mem 6}
+${color green}${font bold:size=8}Filesystem${font}${hr 1}${color}
+
+Root: ${alignr}${fs_free /} / ${fs_size /}
+${fs_bar 4 /}
+Home: ${alignr}${fs_free /home} / ${fs_size /home}
+${fs_bar 4 /home}
+${color green}${font bold:size=8}NETWORK${font}${hr 1}${color}
+
+Down ${downspeed wlp4s0} k/s ${alignr}Up ${upspeed wlp4s0} k/s
+${downspeedgraph wlp4s0 25,107} ${alignr}${upspeedgraph wlp4s0 25,107}
+Total ${totaldown wlp4s0} ${alignr}Total ${totalup wlp4s0}
+

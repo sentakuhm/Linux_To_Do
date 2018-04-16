@@ -1,0 +1,10 @@
+$ sudopacman -S virtualbox
+$ sudo madaramost -a vboxdrv
+======add in virtulabox.conf in modules (see video)======
+$ sudo nano /etc/modules-load.d/virtualbox.conf 
+
+& add :
+
+vboxdrv
+
+$ sudo gpasswd -a $USER vboxusers

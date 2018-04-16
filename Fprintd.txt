@@ -1,0 +1,27 @@
+=================Install Fprint:===================
+$sudo pacman -S fprintd pam libusb imagemagick
+
+=================Configuration:===================
+$sudo su
+
+#groupadd plugdev
+
+#gpasswd -a yourusername plugdev
+
+=================Now set your finger:===============
+For User:
+
+$fprintd-enroll
+
+For Su:
+
+$su
+
+#fprintd-enroll
+
+================Modify: login===================
+$sudo nano /etc/pam.d/login
+
+add this in first line:
+
+auth sufficient pam_fprintd.so

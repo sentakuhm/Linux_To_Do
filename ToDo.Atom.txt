@@ -1,0 +1,9 @@
+Plugins :
+
+atom-live-server
+todo
+emmet
+minimap
+pigments
+ask-stack
+highlight-selected

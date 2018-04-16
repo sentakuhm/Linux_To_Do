@@ -1,0 +1,21 @@
+install :===================================
+sudo pacman -S cups
+
+sudo systemctl enable org.cups.cupsd.service
+
+yaourt capt-src
+
+sudo gpasswd -a madaramost lp
+
+=========reboot==============================
+
+sudo /usr/bin/lpadmin -p LBP6000 -m CNCUPSLBP6018CAPTK.ppd -v ccp://localhost:59687 -E
+
+ls /dev/usb
+
+sudo /usr/bin/ccpdadmin -p LBP6000 -o /dev/usb/lp1
+
+sudo systemctl start ccpd.service
+
+
+

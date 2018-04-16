@@ -1,0 +1,11 @@
+Click on "Start" -->Run --> type cmd and click on OK. 
+
+Here I assume your External hard drive as G: 
+
+Enter this command. 
+
+attrib -h -r -s /s /d g:\*.* 
+
+You can copy the above command --> Right-click in the Command Prompt and 
+
+paste it. 

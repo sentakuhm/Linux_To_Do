@@ -1,0 +1,8 @@
+sudo nano /usr/share/applications/google-chrome.desktop
+
+then find :
+Exec=/usr/bin/google-chrome-stable %U
+
+and add :
+
+--force-device-scale-factor=1.2 after stable
