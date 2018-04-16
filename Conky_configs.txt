@@ -1,5 +1,5 @@
 background no
-font inconsolata:size=9
+font inconsolata:size=10
 #xftfont inconsolata:size=10
 use_xft yes
 xftalpha 0.9
@@ -34,7 +34,7 @@ own_window_colour 000000
 TEXT
 
 
-            ${font hackman:bold:size=12}${color #007fff}Arch${color}Linux${font}
+            ${font BLACKCAPS:bold:size=12}${color #007fff}Arch${color}Linux${font}
 
 
 ${color green}${font bold:size=8}SYSTEM${font}${hr 1}${color}
