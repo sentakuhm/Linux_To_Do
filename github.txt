@@ -1,0 +1,34 @@
+#####Github remote/clone Commands:
+This commands woking on Arch linux
+
+==============First Time Setup:===============
+`$ git init --bare ~/.dotfiles`
+`$ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'`
+`$ config config status.showUntrackedFiles no`
+
+#On bashrc/zshec add:
+
+alias dotfiles='/usr/local/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+save and restart terminal.
+
+#run:
+
+`$config config --local status.showUntrackedFiles no`
+
+/*folder is the the one you want remote*/
+`$config remote add origin git@github.com:sentakuhm/"folder".git`
+
+#Now for example to add file to github:
+
+`$cd $HOME`
+`$dotfiles add .tmux.conf`
+`$dotfiles commit -m "Add .tmux.conf"`
+`$dotfiles push`
+
+==============Setting Up a New Machine========
+`git clone --separate-git-dir=$HOME/.dotfiles https://github.com/anandpiyer/.dotfiles.git tmpdotfiles`
+`rsync --recursive --verbose --exclude '.git' tmpdotfiles/ $HOME/`
+
+#After finishing remove tmpdotfiles
+`rm -r tmpdotfiles`

@@ -5,7 +5,7 @@ sudo systemctl enable org.cups.cupsd.service
 
 yaourt capt-src
 
-sudo gpasswd -a "username" lp
+sudo gpasswd -a madaramost lp
 
 =========reboot==============================
 

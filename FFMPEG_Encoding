@@ -2,3 +2,6 @@ ffmpeg -loglevel debug -vaapi_device /dev/dri/renderD128 -i input -c:v libx264 -
 
 ========HardwarAcceleration==================
 ffmpeg -vaapi_device /dev/dri/renderD128 -i ##########.mkv -vf 'format=nv12,ass=#######.ass,hwupload' -b:v 512k -aspect 16:9 -c:v h264_vaapi -b:v 5M output.mkv
+
+===================== Level 5.1  =============================
+ffmpeg -vaapi_device /dev/dri/renderD128 -i #####.mkv -vf 'format=nv12,ass=#####.ass,hwupload' -b:v 512k -c:v h264_vaapi -profile:v high -level:v 5.1 -b:v 5M output.mkv

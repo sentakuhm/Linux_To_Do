@@ -1,0 +1,13 @@
+
+######Install packages:############
+
+
+pip install NumPy SciPy library matplotlib IPython Pandas Sympy Nose beautifulsoup4 lxml html5lib scrapy jedi fzf
+
+
+#####Upgrade packages:#############
+
+login as root then :
+
+pip freeze — local | grep -v ‘^\-e’ | cut -d = -f 1 | xargs -n1 pip install -U
+

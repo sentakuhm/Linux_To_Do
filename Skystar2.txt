@@ -1,0 +1,9 @@
+1-# hg clone http://linuxtv.org/hg/~endriss/media_build_experimental
+
+Code compilation and driver installation is started by :
+
+2-# cd media_build_experimental
+3-# make download
+4-# make untar
+5-# make
+6-# sudo make install

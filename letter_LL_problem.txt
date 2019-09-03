@@ -1,5 +1,5 @@
-Add that code to : /etc/environment
+login as root
 
-GTK_IM_MODULE=xim
+$echo GTK_IM_MODULE=xim > /etc/environment
 
 save and reboot.

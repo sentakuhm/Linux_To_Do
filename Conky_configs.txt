@@ -1,6 +1,6 @@
 background no
 font inconsolata:size=10
-#xftfont inconsolata:size=10
+#xftfont Source Code Pro:size=11
 use_xft yes
 xftalpha 0.9
 update_interval 3.0
@@ -11,7 +11,7 @@ own_window_transparent yes
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 double_buffer yes
 minimum_size 0 0
-maximum_width 220
+maximum_width 0
 draw_shades yes
 draw_outline no
 draw_borders no
@@ -34,10 +34,10 @@ own_window_colour 000000
 TEXT
 
 
-            ${font BLACKCAPS:bold:size=12}${color #007fff}Arch${color}Linux${font}
+    ${font Comic Sans MS:bold:size=20}${color #007fff}Arch${color}Linux${font}
 
 
-${color green}${font bold:size=8}SYSTEM${font}${hr 1}${color}
+${color green}${font bold:size=10}SYSTEM${font}${hr 1}${color}
 
 Hostname: $alignr$nodename
 Kernel: $alignr$kernel
@@ -64,15 +64,14 @@ ${top_mem name 3}$alignr${top_mem cpu 3}${top_mem mem 3}
 ${top_mem name 4}$alignr${top_mem cpu 3}${top_mem mem 4}
 ${top_mem name 5}$alignr${top_mem cpu 3}${top_mem mem 5}
 ${top_mem name 6}$alignr${top_mem cpu 3}${top_mem mem 6}
-${color green}${font bold:size=8}Filesystem${font}${hr 1}${color}
+${color green}${font bold:size=10}Filesystem${font}${hr 1}${color}
 
 Root: ${alignr}${fs_free /} / ${fs_size /}
 ${fs_bar 4 /}
 Home: ${alignr}${fs_free /home} / ${fs_size /home}
 ${fs_bar 4 /home}
-${color green}${font bold:size=8}NETWORK${font}${hr 1}${color}
+${color green}${font bold:size=10}NETWORK${font}${hr 1}${color}
 
 Down ${downspeed wlp4s0} k/s ${alignr}Up ${upspeed wlp4s0} k/s
 ${downspeedgraph wlp4s0 25,107} ${alignr}${upspeedgraph wlp4s0 25,107}
 Total ${totaldown wlp4s0} ${alignr}Total ${totalup wlp4s0}
-
