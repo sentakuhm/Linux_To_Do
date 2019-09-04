@@ -33,9 +33,9 @@ and change and uncomment like:<br>
 3/ restart Nginx: `$sudo nginx -t`<br>
 		  `$sudo service nginx reload`<br>
 4/ test with: `$sudo nano /var/www/html/info.php and add`<br>
-	```<?php<br>
-        phpinfo();<br>
-        ?>```<br>
+	```<?php
+        phpinfo();
+        ?>```
 then remove it<br>
 `$sudo rm /var/www/html/info.php`<br>
 5/ install phpmyadmin<br>
@@ -44,19 +44,19 @@ then run: `$sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin`<br>
 ###########IP Config###################<br>
 backup default first: `$sudo cp /etc/netplan/50-cloud-init.yaml /etc/netplan/50-cloud-init.yaml.bak`<br>
 `$sudo vim /etc/netplan/50-cloud-init.yaml`<br>
-```network:<br>
-  version: 2<br>
-  renderer: networkd<br>
-  ethernets:<br>
-    enp0s3:<br>
-      dhcp4: yes<br>
-    enp0s8:<br>
-      dhcp4: no<br>
-      dhcp6: no<br>
-      addresses: [192.168.56.91/24, ]<br>
-      gateway4: 192.168.56.1<br>
-      nameservers:<br>
-        addresses: [1.1.1.1,1.0.0.1]```<br>
+```network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp0s3:
+      dhcp4: yes
+    enp0s8:
+      dhcp4: no
+      dhcp6: no
+      addresses: [192.168.56.91/24, ]
+      gateway4: 192.168.56.1
+      nameservers:
+        addresses: [1.1.1.1,1.0.0.1]```
 	
 ##########Mysql Conf################<br>
 Login to MySQL by run:<br>
