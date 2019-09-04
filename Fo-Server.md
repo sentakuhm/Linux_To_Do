@@ -1,4 +1,4 @@
-#############Installing Nginx, MySQL, PHP (LEMP) Stack##########
+#############Installing Nginx, MySQL, PHP (LEMP) Stack##########<br>
 0/ `$sudo ufw enable`
 1/ `$sudo apt install nginx`
 2/ `$sudo ufw allow OpenSSH`
