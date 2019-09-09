@@ -1,4 +1,8 @@
-# This is a netctl static ip settings
+# This is a netctl static ip settings on Arch Linux
+
+*First stop any started services lik Networkmanager or dhcpcd:<br>
+`sudo systemctl stop Networkmanager.service`<br>
+`sudo systemctl stop dhcpcd@enp0s3.service`<br>
 
 `sudo cp /etc/netctl/examples/ethernet-static /etc/netctl/enp0s3`<be>
 
