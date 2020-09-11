@@ -1,6 +1,0 @@
-dark theme GTK input box fix:
-
-1. In Firefox URL bar enter about:config.
-2. Create new String value with name widget.content.gtk-theme-override (Right click > new > String)
-3. Set value to Adwaita:light (if your distribution does not use GNOME    desktop, you should use a name of light GTK theme which is installed on  your PC)
-4. Restart browser
