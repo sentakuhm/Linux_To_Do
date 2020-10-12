@@ -1,5 +1,5 @@
 ### on arch linux base-devel pakage is needed
-`$sudo pacman -S base-devel`
+`$sudo pacman -S bc base-devel`
 
 ### creat a folder on home
 `$mkdir newkernel`
